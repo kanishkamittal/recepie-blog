@@ -33,7 +33,8 @@ route.post('/', async (req, res) => {
     req.body.name,
     req.body.type,
     req.body.ingredients,
-    req.body.recepie
+    req.body.recepie,
+    req.body.img
     )
     res.send(r)
 })

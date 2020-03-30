@@ -31,13 +31,17 @@ const Recepie = db.define('recepieTb', {
   recepie: {
     type: DT.TEXT,
     allowNull: false
+  },
+  img: {
+    type: DT.TEXT,
+    allowNull: false
   }
   })
 
 const Comment = db.define('comment', {
   title: {
     type: DT.STRING(150),
-    allowNull: false
+    allowNull: true
   },
   message: {
     type: DT.TEXT,

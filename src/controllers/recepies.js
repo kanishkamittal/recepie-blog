@@ -1,15 +1,16 @@
 const { Recepie,Comment } = require('../models/db')
 
-async function createRecepie (name,type, ingredients, recepie) {
+async function createRecepie (name,type, ingredients, recepie,img) {
   if (typeof name !== 'string' || name.length < 1) {
     throw new Error('Name empty or undefined')
   }
   if (typeof recepie !== 'string' || recepie.length < 1) {
     throw new Error('Recepie empty or undefined')
   }
+
   try {
     return await Recepie.create({
-      name, type,ingredients, recepie
+      name, type,ingredients, recepie,img
     })
   
   } catch (e) {

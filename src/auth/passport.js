@@ -3,6 +3,7 @@ const { User } = require('../models/db')
 
 passport.serializeUser((user, done) => done(null, user.id))
 
+
 passport.deserializeUser((username, done)=> {
   User.findOne({
     username: username
