@@ -1,10 +1,10 @@
 ### Recipe Blog
 
-  ``` **Language**	: Javascript```
-  ``` **Platform**	: NodeJS```
-   ```**Framework**: ExpressJS```
-  ``` **Database**	: MySQL```
- ```  **ORM**	: Sequelize ```
+   **Language**	: Javascript
+   **Platform**	: NodeJS
+   **Framework**: ExpressJS
+   **Database**	: MySQL
+   **ORM**	: Sequelize 
 
 ### Setup Database
 ```
