@@ -12,7 +12,6 @@ route.get('/', async (req, res) => {
 route.post('/', async (req, res) => {
     // Add a new comment
     const c=await createComment(
-      req.body.title,
       req.body.message,
       req.body.userId,
       req.body.recepieTbId

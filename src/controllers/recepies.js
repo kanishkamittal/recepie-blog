@@ -1,4 +1,4 @@
-const { Recepie,Comment } = require('../models/db')
+const { Recepie,Comment,User } = require('../models/db')
 
 async function createRecepie (name,type, ingredients, recepie,img) {
   if (typeof name !== 'string' || name.length < 1) {
@@ -64,12 +64,12 @@ async function fetchRecepieById (id) {
       include: [
         {
           model: Comment,
-      /*    include: [
+         include: [
             {
               model: User,
               attributes: [ 'username' ]
             }
-          ]*/
+          ]
         }
       ]
     })

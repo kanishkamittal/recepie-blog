@@ -39,13 +39,9 @@ const Recepie = db.define('recepieTb', {
   })
 
 const Comment = db.define('comment', {
-  title: {
-    type: DT.STRING(150),
-    allowNull: true
-  },
   message: {
-    type: DT.TEXT,
-    allowNull:true
+    type: DT.STRING(150),
+    allowNull: false
   }
 })
 

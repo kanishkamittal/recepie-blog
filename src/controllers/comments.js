@@ -8,13 +8,15 @@ async function fetchComments () {
   }
 }
 
-async function createComment (title,message,userId,recepieTbId) {
-    if (typeof title !== 'string' || title.length < 1) {
-      throw new Error('Title empty or undefined')
+async function createComment (message,userId,recepieTbId) {
+    if (typeof message !== 'string' || message.length < 1) {
+      throw new Error('Message empty or undefined')
     }
       try {
       return await Comment.create({
-        title,message,userId,recepieTbId
+        message,
+        userId,
+        recepieTbId
       })
     
     } catch (e) {

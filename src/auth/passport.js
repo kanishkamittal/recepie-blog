@@ -1,11 +1,11 @@
 const passport = require('passport')
 const { User } = require('../models/db')
 
-passport.serializeUser((user, done) => done(null, user.id))
+passport.serializeUser((user, done) => done(null, user.username))
 
 passport.deserializeUser((username, done)=> {
   User.findOne({
-    username: username
+    'username': username
   }).then((user) => {
       if (!user) {
           return done(new Error("No such user"))
@@ -17,7 +17,12 @@ passport.deserializeUser((username, done)=> {
 })
 
 
+
 passport.use(require('./strategies/passport-local-strategy'))
 module.exports = passport
+
+
+
+
 
 

@@ -29,16 +29,13 @@
        <h1>Comments</h1>
 
        {{#each recepie.comments as |comment|}}
-            <h3>{{comment.title}}</h3>
-            <h5 class="w3-padding-32">   
-                {{comment.message}}
+             <h5 class="w3-padding-32">   
+               {{comment.username}}:{{comment.message}}
             </h5>
      
        {{/each}}
        <form method="post" action="/api/comments">
-           <input type="text" name="title" placeholder="title">
-           <br>
-           <input name="message" name="message" placeholder="message">
+           <input name="message" name="message" placeholder="Write a comment">
            <br>
            <input type="submit">
            <input type="reset">
